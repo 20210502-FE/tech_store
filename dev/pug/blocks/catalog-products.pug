@@ -1,0 +1,147 @@
+-
+    var products = [{
+        imagePath: 'assets/images/product1.png',
+        imageAlt: 'Laptop',
+        inStock: true,
+        reviewsCount: 5,
+        stars: 2,
+        title: 'ex display : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+        primaryPrice: '600.00',
+        newPrice: '499.99',
+        currency: '$'
+    },
+    {
+        imagePath: 'assets/images/product1.png',
+        imageAlt: 'Laptop',
+        inStock: false,
+        reviewsCount: 8,
+        stars: 4,
+        title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+        primaryPrice: '600.00',
+        newPrice: '499.00',
+        currency: '$'
+    },
+    {
+        imagePath: 'assets/images/product1.png',
+        imageAlt: 'Laptop',
+        inStock: true,
+        reviewsCount: 3,
+        stars: 4,
+        title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+        primaryPrice: '600.00',
+        newPrice: '499.00',
+        currency: '$'
+    },
+    {
+        imagePath: 'assets/images/product1.png',
+        imageAlt: 'Laptop',
+        inStock: true,
+        reviewsCount: 5,
+        stars: 4,
+        title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+        primaryPrice: '600.00',
+        newPrice: '499.00',
+        currency: '$'
+    },
+    {
+        imagePath: 'assets/images/product1.png',
+        imageAlt: 'Laptop',
+        inStock: false,
+        reviewsCount: 25,
+        stars: 4,
+        title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+        primaryPrice: '600.00',
+        newPrice: '499.00',
+        currency: '$'
+    },
+    {
+        imagePath: 'assets/images/product1.png',
+        imageAlt: 'Laptop',
+        inStock: true,
+        reviewsCount: 5,
+        stars: 3,
+        title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+        primaryPrice: '600.00',
+        newPrice: '499.00',
+        currency: '$'
+    },
+    {
+        imagePath: 'assets/images/product1.png',
+        imageAlt: 'Laptop',
+        inStock: true,
+        reviewsCount: 11,
+        stars: 4,
+        title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+        primaryPrice: '600.00',
+        newPrice: '499.00',
+        currency: '$'
+    },
+    {
+        imagePath: 'assets/images/product1.png',
+        imageAlt: 'Laptop',
+        inStock: true,
+        reviewsCount: 5,
+        stars: 8,
+        title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+        primaryPrice: '600.00',
+        currency: '$'
+    },
+    {
+        imagePath: 'assets/images/product1.png',
+        imageAlt: 'Laptop',
+        inStock: false,
+        reviewsCount: 5,
+        stars: 1,
+        title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+        primaryPrice: '<b>600.00</b>',
+        newPrice: '',
+        currency: '$'
+    }];
+
+section.catalog
+    .wrapper
+        .catalog__column
+            each product in products
+                article.product
+                    if product.inStock
+                        p In Stock
+                    else
+                        p check availability
+                    .product__image
+                        img(src=product.imagePath alt=product.imageAlt)
+                    .product__star
+                        case product.stars
+                            when 1: span *
+                            when 2: span **
+                            when 3: span ***
+                            when 4: span ****
+                            when 5: span *****
+                            default: span 0
+                    .product__review Reviews(#{product.reviewsCount})
+                    .product__title=product.title.toLowerCase()
+                    if product.newPrice
+                        .product__price.product__price_linethrough #{product.currency}!{product.primaryPrice}
+                        .product__new-price=product.currency + product.newPrice
+                    else
+                        .product__price #{product.currency}!{product.primaryPrice}
+
+
+//if product.inStoke === (if product.inStock === true)
+//if !product.inStoke === (if product.inStock === false)
+-
+    var footerContent = {
+         'Information': [{name: 'About us', href: '/about-us.html', clickableText: ''},
+                         {name: 'About Zip', href: 'mailto:jullia@gmail.com', clickableText: 'jullia@gmail.com'}]
+    }
+
+div
+    each array, key in footerContent
+        strong=key
+        ul
+            each item in array
+                li
+                    if item.clickableText
+                        span=item.name
+                        a(href=item.href)=item.clickableText
+                    else
+                        a(href=item.href)=item.name
