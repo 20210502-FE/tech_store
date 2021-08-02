@@ -21,6 +21,7 @@ body {
   position: relative;
   font-family: $p-font-regular;
   background-color: $color-gallery;
+  overflow-x: hidden;
 }
 
 a {
@@ -34,4 +35,19 @@ li {
 img {
   width: 100%;
   height: auto;
+}
+
+.wrapper {
+  max-width: calc(100% - 28px);
+  margin: 0 auto;
+
+  @include respond-to(tablet) {
+    max-width: calc(100% - 42px);
+    margin: 0 auto;
+  } 
+
+  @include respond-to(desktopHD) {
+    max-width: calc(100% - 522px);
+    margin: 0 auto;
+  } 
 }
