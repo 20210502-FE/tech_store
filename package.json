@@ -22,6 +22,7 @@
     "gulp-copy": "^4.0.1",
     "gulp-plumber": "latest",
     "gulp-sourcemaps": "^3.0.0",
-    "npm": "^6.14.12"
+    "npm": "^6.14.12",
+    "pug": "^3.0.2"
   }
 }
