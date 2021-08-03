@@ -1,0 +1,74 @@
+{
+  "Custom builds": [
+    {
+      "id": 1,
+      "logo": "assets/images/product-",
+      "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+      "rate": 4,
+      "reviews_count": 5,
+      "currency": "$",
+      "price": "1000.00",
+      "sale_price": "499.99",
+      "in_stock": true,
+      "category": "custom"
+    },
+    {
+      "id": 2,
+      "logo": "assets/images/product-",
+      "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+      "rate": 1,
+      "reviews_count": 10,
+      "currency": "$",
+      "price": "1200.00",
+      "sale_price": "0",
+      "in_stock": false,
+      "category": "custom"
+    },
+    {
+      "id": 3,
+      "logo": "assets/images/product-",
+      "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+      "rate": 3,
+      "reviews_count": 55,
+      "currency": "$",
+      "price": "800.00",
+      "sale_price": "399.99",
+      "in_stock": true,
+      "category": "custom"
+    },
+    {
+      "id": 4,
+      "logo": "assets/images/product-",
+      "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+      "rate": 4,
+      "reviews_count": 8,
+      "currency": "$",
+      "price": "1250.00",
+      "sale_price": "899.99",
+      "in_stock": true,
+      "category": "custom"
+    },
+    {
+      "id": 5,
+      "logo": "assets/images/product-",
+      "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+      "rate": 5,
+      "reviews_count": 40,
+      "currency": "$",
+      "price": "1699.00",
+      "sale_price": "1399.99",
+      "in_stock": true,
+      "category": "custom"
+    }
+  ],
+  "MSI Laptops": [
+    {}
+  ],
+  "Desktops": [
+    {}
+  ],
+  "Gaming Monitors": [
+    {}
+  ]
+}
+

@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 4,
+    "reviews_count": 5,
+    "currency": "$",
+    "price": "1000.00",
+    "sale_price": "499.99",
+    "in_stock": true
+  },
+  {
+    "id": 2,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 1,
+    "reviews_count": 10,
+    "currency": "$",
+    "price": "1200.00",
+    "sale_price": "0",
+    "in_stock": false
+  },
+  {
+    "id": 3,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 3,
+    "reviews_count": 55,
+    "currency": "$",
+    "price": "800.00",
+    "sale_price": "399.99",
+    "in_stock": true
+  },
+  {
+    "id": 4,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 4,
+    "reviews_count": 8,
+    "currency": "$",
+    "price": "1250.00",
+    "sale_price": "899.99",
+    "in_stock": true
+  },
+  {
+    "id": 5,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 5,
+    "reviews_count": 40,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": true
+  },
+  {
+    "id": 6,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 3,
+    "reviews_count": 20,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": true
+  },
+  {
+    "id": 7,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 4,
+    "reviews_count": 4,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": true
+  },
+  {
+    "id": 8,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 2,
+    "reviews_count": 80,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": true
+  },
+  {
+    "id": 9,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 5,
+    "reviews_count": 9,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": true
+  },
+  {
+    "id": 10,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 1,
+    "reviews_count": 52,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": false
+  },
+  {
+    "id": 11,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 0,
+    "reviews_count": 0,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": true
+  },
+  {
+    "id": 12,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 6,
+    "reviews_count": 9,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": true
+  },
+  {
+    "id": 13,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 3,
+    "reviews_count": 18,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": true
+  },
+  {
+    "id": 14,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 4,
+    "reviews_count": 32,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": true
+  },
+  {
+    "id": 15,
+    "logo": "assets/images/product-",
+    "name": "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On",
+    "rate": 4,
+    "reviews_count": 54,
+    "currency": "$",
+    "price": "1699.00",
+    "sale_price": "1399.99",
+    "in_stock": false
+  }
+]
