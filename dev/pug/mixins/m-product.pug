@@ -1,0 +1,10 @@
+mixin product(item)
+    article.product
+        span(class=item.in_stock ? 'in-stock': 'check')=item.in_stock ? 'In stock' : 'Check availability'
+        .product__image
+            img(src=(item.logo + item.id + '.png') alt=item.name)
+        .product__rate
+        .product__title=item.name
+        .product__price(class=item.sale_price === '0' ? 'product__price_linethrough': undefined)=item.currency+item.price
+        if item.sale_price
+            .product__price=item.currency+item.sale_price

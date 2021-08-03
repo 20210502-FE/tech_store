@@ -7,6 +7,15 @@ const browsersync = require('browser-sync');
 const gulpCopy = require('gulp-copy');
 const del = require('del');
 
+//https://github.com/yukal/gulp-json-loader
+const plugins = require('gulp-load-plugins')();
+const jsonLoaderFactory = require('./libs/gulp-json-loader');
+const jsonLoader = jsonLoaderFactory({
+    pathHtml: 'dev/pug/pages',
+    pathData: 'dev/data',
+    report: true,
+});
+
 var paths = {
     build: './build/',
     scss: './dev/scss/',
@@ -17,6 +26,7 @@ var paths = {
 function templates() {
     return src(paths.pug + 'pages/*.pug')
         .pipe(plumber())
+        .pipe(plugins.data(jsonLoader))
         .pipe(pug({pretty: true}))
         .pipe(dest('build/'))
 }

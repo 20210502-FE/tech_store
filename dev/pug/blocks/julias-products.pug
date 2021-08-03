@@ -1,0 +1,7 @@
+include ../mixins/m-product
+
+section.products-by-category
+    each arrayOfProducts, key in data.imports.products_by_category
+        div=key
+        each productObj in arrayOfProducts
+            +product(productObj)
