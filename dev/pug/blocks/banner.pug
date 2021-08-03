@@ -9,7 +9,7 @@
 section.banner
     .wrapper.banner__wrapper
         each item in bannerImage
-            img(src=item.imagePath, alt=item.imageAlt + '-banner').banner__image(id=item.id)
+            img(src=item.imagePath alt=item.imageAlt + '-banner' id=item.id).banner__image
         .banner__buttons
             button.banner__btn.banner__btn_left
                 span.banner__arrow &#8249
