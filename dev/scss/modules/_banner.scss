@@ -1,0 +1,71 @@
+.banner {
+  padding: 12px 0;
+  background-color: $color-white;
+
+  @include respond-to(tablet) {
+    padding: 19px 0;
+  }
+
+  @include respond-to(desktop) {
+    padding: 27px 0;
+  }
+
+  &__wrapper {
+    max-width: calc(100% - 14px);
+    margin: 0 auto;
+    position: relative;
+
+    @include respond-to(tablet) {
+      max-width: calc(100% - 20px);
+    }
+
+    @include respond-to(desktop) {
+      max-width: calc(100% - 260px);
+    }
+  }
+
+  &__btn {
+    background-color: $color-shark;
+    opacity: 0.5;
+    border: none;
+
+    &:hover {
+      background-color: $color-gray;
+      opacity: 0.3;
+    }
+
+    &_left {
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      left: 0;
+    }
+
+    &_right {
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      right: 0;
+    }
+  }
+
+  &__btn_left, &__btn_right {
+    height: 36.5px;
+    width: 24px;
+    position: absolute;
+    top: 25%;
+
+    @include respond-to(tablet) {
+      top: 35%;
+    }
+
+    @include respond-to(desktop) {
+      height: 48px;
+      width: 36px;
+      top: 40%
+    }
+  }
+
+  &__arrow {
+    color: $color-white;
+    @include font-size(15);
+  }
+}

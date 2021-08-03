@@ -1,0 +1,149 @@
+.quotes {
+  background-color: $color-white;
+  padding: 15px 0;
+
+  @include respond-to(tablet) {
+    padding: 18px 0;
+  }
+
+  @include respond-to(desktop) {
+    padding: 63px 0;
+  }
+
+  &__wrapper {
+    max-width: calc(100% - 15px);
+    background-color: $color-zircon;
+    margin: 0 auto;
+
+    @include respond-to(tablet) {
+      max-width: calc(100% - 20px);
+    }
+
+    @include respond-to(desktop) {
+      max-width: calc(100% - 380px);
+    }
+  }
+
+  &__content {
+    padding: 25px 12px 27px 19px;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(tablet) {
+      padding: 35px 42px 29px 21px;
+    }
+
+    @include respond-to(desktop) {
+      padding: 49px 119px 56px;
+    }
+  }
+
+  &__blockquote {
+    position: relative;
+
+    &::before {
+      content: ' ‘’ ';
+      position: absolute;
+      top: -15px;
+      @include font-size(52);
+      line-height: 78px;
+      height: 69px;
+      width: 46px;
+
+      @include respond-to(desktop) {
+        @include font-size(100);
+        top: 5px;
+      }
+    }
+  }
+
+  &__blockquote-text {
+    @include font-size(13);
+    line-height: 21px;
+    padding: 0 24px 0 43px;
+
+    @include respond-to(tablet) {
+      padding: 0 22px 0 45px;
+    }
+
+    @include respond-to(desktop) {
+      @include font-size(18);
+      line-height: 27px;
+      padding: 0 30px 0 80px;
+    }
+  }
+
+  &__blockquote-cite {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    @include font-size(10);
+    line-height: 15px;
+    margin: 4px 0 22px 0;
+
+    @include respond-to(tablet) {
+      margin: 16px 0 10px 0;
+    }
+
+    @include respond-to(desktop) {
+      margin: 16px 0 37px 0;
+      @include font-size(14);
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    background-color: transparent;
+    padding: 0 24px;
+    height: 37px;
+    width: 189px;
+    border-radius: 50px;
+    border-color: $color-blue-ribbon;
+    font-family: $p-font-medium;
+    @include font-size(14);
+    line-height: 21px;
+    text-align: center;
+    color: $color-blue-ribbon;
+
+    @include respond-to(desktop) {
+      width: 196px;
+    }
+  }
+
+  &__slider {
+    display: flex;
+  }
+
+  &__circle {
+    height: 9px;
+    width: 9px;
+    border-radius: 50px;
+    background-color: $color-mystic;
+    margin: 0 4px;
+
+    &:hover {
+      background-color: $color-blue-ribbon;
+      transition: all .1s ease-in;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_blue {
+      background-color: $color-blue-ribbon;
+    }
+
+    @include respond-to(desktop) {
+      height: 12px;
+      width: 12px;
+      margin: 0 10px;
+    }
+  }
+}
+
