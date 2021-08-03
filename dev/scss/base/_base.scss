@@ -9,11 +9,13 @@
   box-sizing: border-box;
 }
 
-*::before, *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   min-height: 100%;
 }
 
@@ -32,6 +34,6 @@ li {
 }
 
 img {
-  width: 100%;
+  width: 100%; // це для того, щоб картинка не іскажалась при різних розширенням
   height: auto;
 }
