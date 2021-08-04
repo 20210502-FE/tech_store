@@ -54,12 +54,12 @@ footer.footer
                 button.footer__button(type="button") Subscribe
         .footer__menu.flex.flex_wrap
             each array, key in footerContent
-                .footer__menu-column
+                .footer__menu-column.accordion
                     .flex.flex_column
-                        .flex
+                        .flex.footer__toggle.accordion__heading
                             .footer__menu-heading=key
                             button.footer__button-arrow(type="button")
-                                img.footer-arow(src="assets/icons/footer-arrow-icon.png", alt="arrow")
+                                img.footer-arrow(src="assets/icons/footer-arrow-icon.png", alt="arrow")
                         ul.footer__menu-list.flex.flex_column
                             each item in array
                                 li.footer__menu-item !{item}

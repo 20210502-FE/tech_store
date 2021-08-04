@@ -210,12 +210,9 @@
         }
 
         &-column {
-            padding-top: 26px;
-            padding-bottom: 12px;
             border-bottom: 1px solid $color-gray;
 
             @include respond-to(desktop) {
-                padding: 20px 40px 0;
                 border-bottom: none;
             }
 
@@ -251,6 +248,7 @@
             position: absolute;
             visibility: hidden;
             margin-left: 6px;
+            margin-bottom: 12px;
 
             @include respond-to(tablet) {
                 margin-left: 13px;
@@ -260,6 +258,7 @@
                 position: relative;
                 visibility: visible;
                 margin-left: 0;
+                margin-bottom: 0;
             }
 
             &_active {
@@ -367,10 +366,23 @@
             line-height: 16px;
         }
     }
+
+    &-arrow {
+        &_top {
+            transform: rotate(180deg);
+        }
+    }
 }
 
-.footer-arrow {
-    &_top {
-        transform: rotate(180deg);
+.accordion__heading {
+    padding-top: 26px;
+    padding-bottom: 7px;
+
+    @include respond-to(desktop) {
+        padding: 20px 40px 0;
+    }
+
+    @include respond-to(desktopHD) {
+        padding: 0;
     }
 }
