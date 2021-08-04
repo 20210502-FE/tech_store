@@ -1,0 +1,140 @@
+-
+    var articles = [{
+        imagePath: 'assets/images/article-img1.png',
+        imageAlt: 'image',
+        text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+        data: '01.09.2020'
+    },
+    {
+        imagePath: 'assets/images/article-img2.png',
+        imageAlt: 'image',
+        text: 'As a gamer, superior sound counts for a lot. You need to hear enemies tiptoeing up behind you for a sneak attack or a slight change in the atmospheric music signaling a new challenge or task...',
+        data: '01.09.2020'
+    },
+    {
+        imagePath: 'assets/images/article-img3.png',
+        imageAlt: 'image',
+        text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+        data: '01.09.2020'
+    },
+    {
+        imagePath: 'assets/images/article-img4.png',
+        imageAlt: 'image',
+        text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+        data: '01.09.2020'
+    },
+    {
+        imagePath: 'assets/images/article-img5.png',
+        imageAlt: 'image',
+        text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+        data: '01.09.2020'
+    },
+    {
+        imagePath: 'assets/images/article-img6.png',
+        imageAlt: 'image',
+        text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+        data: '01.09.2020'
+    },
+    {
+        imagePath: 'assets/images/article-img7.png',
+        imageAlt: 'image',
+        text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+        data: '01.09.2020'
+    },
+    {
+        imagePath: 'assets/images/article-img8.png',
+        imageAlt: 'image',
+        text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+        data: '01.09.2020'
+    },
+    {
+        imagePath: 'assets/images/article-img9.png',
+        imageAlt: 'image',
+        text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+        data: '01.09.2020'
+    }];
+
+article.articles
+    .wrapper.articles__wrapper
+        h3.articles__title Follow us on Instagram for News, Offers & More
+            .articles__content.flex.flex_wrap.flex_content-start
+                each article in articles
+                    .articles__column
+                        .articles__column_image
+                            img(src=article.imagePath alt=article.imageAlt)
+                        .articles__column_text=article.text
+                        .articles__column_data=article.data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//section.catalog
+//    .wrapper
+//        .catalog__column
+//            each product in products
+//                article.product
+//                    if product.inStock
+//                        p In Stock
+//                    else
+//                        p check availability
+//                    .product__image
+//                        img(src=product.imagePath alt=product.imageAlt)
+//                    .product__star
+//                        case product.stars
+//                            when 1: span *
+//                            when 2: span **
+//                            when 3: span ***
+//                            when 4: span ****
+//                            when 5: span *****
+//                            default: span 0
+//                    .product__review Reviews(#{product.reviewsCount})
+//                    .product__title=product.title.toLowerCase()
+//                    if product.newPrice
+//                        .product__price.product__price_linethrough #{product.currency}!{product.primaryPrice}
+//                        .product__new-price=product.currency + product.newPrice
+//                    else
+//                        .product__price #{product.currency}!{product.primaryPrice}
+//
+//
+////if product.inStoke === (if product.inStock === true)
+////if !product.inStoke === (if product.inStock === false)
+//-
+//    var footerContent = {
+//        'Information': [{name: 'About us', href: '/about-us.html', clickableText: ''},
+//            {name: 'About Zip', href: 'mailto:jullia@gmail.com', clickableText: 'jullia@gmail.com'}]
+//    }
+//
+//div
+//    each array, key in footerContent
+//        strong=key
+//        ul
+//            each item in array
+//                li
+//                    if item.clickableText
+//                        span=item.name
+//                        a(href=item.href)=item.clickableText
+//                    else
+//                        a(href=item.href)=item.name
+//
+
+

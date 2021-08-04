@@ -1,7 +1,10 @@
-@import "../base/fonts";
 @import "../utilities/variables";
 @import "../utilities/mixins";
+
 @import "../base/base";
+@import "../base/fonts";
+@import "../base/layout";
 
 @import "../modules/quotes";
 @import "../modules/banner";
+@import "../modules/articles";
