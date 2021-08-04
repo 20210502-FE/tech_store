@@ -1,0 +1,103 @@
+-
+  var products = [{
+    imagePath: 'assets/images/new-product.png',
+    imageAlt: 'Laptop',
+    inStock: true,
+    reviewsCount: 5,
+    stars: 'assets/images/star.png',
+    title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+    primaryPrice: '499.00',
+    newPrice: '499.00',
+    curency: '$'
+  },
+  {
+    imagePath: 'assets/images/new-product1.png',
+    imageAlt: 'Laptop',
+    inStock: false,
+    reviewsCount: 5,
+    stars: 'assets/images/star.png',
+    title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+    primaryPrice: '499.00',
+    newPrice: '499.00',
+    curency: '$'
+  },
+  {
+    imagePath: 'assets/images/new-product2.png',
+    imageAlt: 'Laptop',
+    inStock: true,
+    reviewsCount: 5,
+    stars: 'assets/images/star.png',
+    title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+    primaryPrice: '499.00',
+    newPrice: '499.00',
+    curency: '$'
+  },
+  {
+    imagePath: 'assets/images/new-product3.png',
+    imageAlt: 'Laptop',
+    inStock: true,
+    reviewsCount: 5,
+    stars: 'assets/images/star.png',
+    title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+    primaryPrice: '499.00',
+    newPrice: '499.00',
+    curency: '$'
+  },
+  {
+    imagePath: 'assets/images/new-product2.png',
+    imageAlt: 'Laptop',
+    inStock: true,
+    reviewsCount: 5,
+    stars: 'assets/images/star.png',
+    title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+    primaryPrice: '499.00',
+    newPrice: '499.00',
+    curency: '$'
+  },
+  {
+    imagePath: 'assets/images/new-product2.png',
+    imageAlt: 'Laptop',
+    inStock: true,
+    reviewsCount: 5,
+    stars: 'assets/images/star.png',
+    title: 'EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...',
+    primaryPrice: '499.00',
+    newPrice: '499.00',
+    curency: '$'
+  }];
+
+section.new-products
+    .new-products__wrap-top
+      h1.title new prodects
+      a(href = '#').all-products See All New Products
+    .new-products__wrap 
+      button.product__button.product__button_left
+        img.button-img(src="assets/images/product-arrow-left.png", alt="arrow")
+      .product-column
+        each product in products
+          article.product
+            .product__status-wrap 
+              if product.inStock
+                img.product__status-img(src="assets/images/status.png", alt="")
+                p.product__status in stock
+              else 
+                img.product__status-img(src="assets/images/status-false.png", alt="")
+                p.product__status_false check availability
+            .product__image 
+              img.product__image-picture(src=product.imagePath alt=product.imageAlt)
+            .product__star 
+              - for (var i=0; i<4; i++)
+                img.product__star-picture(src=product.stars alt="star")
+              img.product__star-picture_gray(src="assets/images/star-gray.png", alt="star")
+              .product__review Review(#{product.reviewsCount})
+            .product__title=product.title
+            .product__primary-rice #{product.curency} !{product.primaryPrice}
+            .product__new-rice #{product.curency} !{product.newPrice}
+      button.product__button.product__button_right
+        img.button-img(src="assets/images/product-arrow-right.png", alt="arrow")
+    .new-products__wrap-bottom 
+      img.new-products__logo(srcset="assets/images/new-product-logo.png 320w, assets/images/new-product-logo2.png 480w, assets/images/new-product-logo3.png 800w", sizes="(max-width: 767px) 280px, (max-width: 1023px) 440px, 800px", src="assets/images/new-product-logo.png", alt="logo")
+      .new-products__stock #[span.stoc-span own] it now, up to 6 months interest free
+      a(href="#").new-products__stock-link learn more
+
+

@@ -1,0 +1,250 @@
+.new-products {
+  background-color: $color-gallery;
+  padding-top: 19px;
+
+  &__wrap-top {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 13px;
+  }
+
+  &__wrap {
+    position: relative;
+    padding-top: 7px;
+    display: flex;
+  }
+
+  &__wrap-bottom {
+    background-color: $color-zircon;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include respond-to(tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    width: 37px;
+    height: 13px;
+    margin-bottom: 18px;
+
+    @include respond-to(tablet) {
+      width: 47px;
+      height: 16.5px;
+      margin-bottom: 0;
+    }
+
+    @include respond-to(desktop) {
+      width: 76.5px;
+      height: 27px;
+    }
+  }
+
+  &__stock {
+    position: relative;
+    font-size: 12px;
+    color: $color-port-gore;
+    margin-bottom: 11px;
+
+    @include respond-to(tablet) {
+      margin-left: 24px;
+      font-size: 14px;
+      margin-bottom: 0;
+      ::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        bottom: 0;
+        background-color: $color-pacific-blue;
+        width: 2px;
+        height: 17px;
+      }
+    }
+
+    @include respond-to(desktop) {
+      font-size: 18px;
+      ::before {
+        height: 23px;
+      }
+    }
+  }
+
+  &__stock-link {
+    font-size: 14px;
+    color: $color-port-gore;
+    text-decoration: underline;
+
+    @include respond-to(tablet) {
+      margin-left: 12px;
+    }
+
+    @include respond-to(desktop) {
+      margin-left: 5px;
+    }
+  }
+}
+
+.stoc-span {
+  font-family: $p-font-bold;
+}
+
+.title {
+  font-family: $p-font-semi-bold;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.all-products {
+  font-family: $p-font-regular;
+  font-size: 10px;
+  color: $color-blue-ribbon;
+  text-decoration: underline;
+}
+
+.product-column {
+  display: flex;
+  justify-content: center;
+}
+
+.button-img {
+  width: 9px;
+  height: 15px;
+}
+
+.product {
+  min-width: 195px;
+  background-color: $color-white;
+  padding: 0 25px 20px 25px;
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    background-color: $color-dark-grey_opacity;
+    width: 36px;
+    height: 48px;
+
+    &_left {
+      border-radius: 0 30px 30px 0;
+      border: none;
+    }
+
+    &_right {
+      right: 0;
+      border-radius: 30px 0 0 30px;
+      border: none;
+    }
+
+    @include respond-to(mobile) {
+      visibility: hidden;
+    }
+
+    @include respond-to(tablet) {
+      visibility: hidden;
+    }
+
+    @include respond-to(desktop) {
+      visibility: visible;
+    }
+  }
+
+  @include respond-to(tablet) {
+    min-width: 235px;
+  }
+
+  &__status-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__status-img {
+    width: 10px;
+    height: 10px;
+    margin-left: 8px;
+  }
+
+  &__image {
+    margin-top: 7px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__image-picture {
+    width: 100px;
+    height: 100px;
+
+    @include respond-to(tablet) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  &__star {
+    display: flex;
+    align-items: center;
+  }
+
+  &__star-picture {
+    width: 9px;
+    height: 9px;
+
+    @include respond-to(tablet) {
+      width: 13px;
+      height: 13px;
+    }
+
+    &_gray {
+      width: 10px;
+      height: 10px;
+
+      @include respond-to(tablet) {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+
+  &__review {
+    margin-left: 10px;
+    font-size: 10px;
+    color: $color-gray;
+
+    @include respond-to(tablet) {
+      font-size: 13px;
+    }
+  }
+
+  &__title {
+    font-size: 11px;
+    line-height: 16px;
+
+    @include respond-to(tablet) {
+      font-size: 13px;
+      line-height: 19.5px;
+    }
+  }
+
+  &__primary-rice {
+    font-size: 12px;
+    color: $color-dark-grey;
+    text-decoration-line: line-through;
+
+    @include respond-to(tablet) {
+      font-size: 14px;
+    }
+  }
+
+  &__new-rice {
+    font-family: $p-font-bold;
+    font-size: 14px;
+
+    @include respond-to(tablet) {
+      font-size: 18px;
+    }
+  }
+}
