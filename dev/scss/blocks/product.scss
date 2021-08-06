@@ -1,0 +1,388 @@
+.product {
+    padding: 14px 0 31px;
+    background-color: $color-white;
+
+    &__column {
+        margin-bottom: 14px;
+
+        @media screen and (min-width: 600px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        @include respond-to(desktop) {
+            margin-bottom: 27px;
+        }
+    }
+
+    &__button {
+        font-family: $p-font-medium, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        color: $color-blue-ribbon;
+        border: 2px solid $color-blue-ribbon;
+        padding: 8px 20px 8px 48px;
+        border-radius: 25px;
+        background-color: $color-white;;
+        cursor: pointer;
+        position: relative;
+
+        &:before {
+            content: '';
+            background-image: url(../assets/icon/basket.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 19px;
+            height: 17px;
+            left: 20px;
+            top: 8px;
+        }
+
+        
+
+        &-wrapper {
+            display: none;
+            position: absolute;
+            left: 37px;
+            bottom: -25px;
+        }
+    }
+
+    &__rating {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 15px;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        border: none;
+        border-radius: 50%;
+        border: none;
+        background-color: inherit;
+
+        &:hover {
+            background-color: $color-zircon;
+        }
+    }
+
+    &__like {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        border: none;
+        border-radius: 50%;
+        background-color: inherit;
+        transform: all .5s;
+
+        &:hover {
+            background-color: $color-zircon;
+        }
+    }
+
+    &__article { 
+
+        &-inner {
+            width: 230px;
+            height: 346px;
+            padding: 4px 22.5px;
+            
+            @include respond-to(desktopHD) {
+                width: 234px;
+            }
+        }
+
+        &-item {
+            position: relative;
+            
+
+            &:hover {
+                transform: scale(1);
+            }
+            
+            &:hover .product__button-wrapper{
+                @include respond-to(desktop) {
+                    display: block;
+                } 
+            }
+
+            &:hover .product__rating{
+                @include respond-to(desktop) {
+                    display: block;
+                } 
+            }
+
+            &:hover .product__like{
+                @include respond-to(desktop) {
+                    display: block;
+                } 
+            }
+        }  
+    }
+
+    &__catalog {
+        width: 345px;
+        height: 82px;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 13px;
+
+        @media screen and (min-width: 600px) {
+            width: 230px;
+            height: 346px;
+            justify-content: flex-start;
+        }
+        
+        &-build {
+            background-image: url(../assets/images/product-custome-builds.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &-laptops {
+            background-image: url(../assets/images/product-msi-laptops.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &-desktop {
+            background-image: url(../assets/images/product-desktop.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &-monitor {
+            background-image: url(../assets/images/product-gaming-monitors.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &-title {
+            font-family: $p-font-semi-bold, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 130%;
+            color: $color-white;
+            margin-bottom: 15px;
+
+            @include respond-to(tablet) {
+                max-width: 95px;
+                margin: 0 auto;
+                padding: 151px 0 100px;
+            }
+
+            @include respond-to(desktopHD) {
+                font-size: 22px;
+            }
+        }
+
+        &-link {
+            font-family: $p-font-regular, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 115%;
+            text-decoration-line: underline;
+            color: $color-white;
+            transition: all .5s;
+
+            &:hover {
+
+                @include respond-to(desktop) {
+                    color: $color-grey;
+                } 
+            }
+
+            @include respond-to(desktopHD) {
+                font-size: 13px;
+            }
+        }
+    }
+
+    &__nav {
+        margin-bottom: 11px;
+
+        @media screen and (min-width: 600px) {
+            order: -1;
+            width: 100%;
+            margin-bottom: 14px;
+        }
+
+        @include respond-to(desktop) {
+            margin-bottom: 26px;
+        } 
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -8px -8px;
+            
+            @include respond-to(desktopHD) {
+                padding: 0 -13px;
+            } 
+        }
+
+        &-item {
+            padding: 0 8px 8px;
+
+            @include respond-to(desktopHD) {
+                padding: 0 13px;
+            } 
+        }
+
+        &-link {
+            font-family: $p-font-semi-bold, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 140%;
+            text-align: center;
+            color: $color-grey;
+            transition: all .5s;
+
+            &:hover {
+
+                @include respond-to(desktop) {
+                    color: $color-black;
+                } 
+            }
+
+            &:active {
+                color: $color-black;
+                border-bottom: 2px solid $color-blue-ribbon;
+            }
+
+            @include respond-to(desktopHD) {
+                font-size: 16px;
+                line-height: 140%;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+
+        @media screen and (min-width: 600px) {
+            width: 0;
+        }
+    }
+
+    &__stock {
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 235%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding-left: 23px;
+        position: relative;
+
+        &-in {
+            
+            color: $color-green;
+
+            &::before {
+                content: url(../assets/icon/stock-tick.png);
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        &-check {
+            color: $color-mojo;
+
+            &::before {
+                content: url(../assets/icon/stock-check.png);
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    &__img {
+        width: 150px;
+        font-size: 0;
+
+        &-wrapper {
+            text-align: center;
+        }
+    }
+
+    &__star svg {
+        width: 14.5px;
+        height: 14.5px;
+    }
+
+    &__reviews {
+        display: flex;
+        margin-bottom: 5px;
+
+        &-link {
+            font-family: $p-font-regular, sans-serif;
+            font-size: 12px;
+            line-height: 210%;
+            color: $color-gray;
+            margin-left: 9px;
+            transition: all .5s;
+
+            &:hover {
+                color: $color-dark-grey;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 13px;
+        line-height: 19px;
+        color: $color-black;
+        width: 185px;
+        margin-bottom: 16px;
+    }
+
+    &__price {
+        font-family: $p-font-medium, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 140%;
+        color: $color-black;
+
+        &_linethrough {
+            font-family: $p-font-regular, sans-serif;
+            font-size: 14px;
+            line-height: 140%;
+            text-decoration: line-through;
+            color: $color-dark-grey;
+        }
+
+        &-new {
+            font-family: $p-font-medium, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 140%;
+            color: $color-black;
+        }
+    }
+}
