@@ -1,0 +1,44 @@
+header.header
+    .header-wrapper 
+        .header__content 
+            .header__logo 
+                img(src="assets/icons/header-logo.png", alt="")
+            .burger-menu
+                input#menu-toggle(type="checkbox")
+                label.menu-btn(for="menu-toggle")
+                    span 
+                nav.nav
+                    ul.nav__list
+                        li
+                            a.nav__item(href="#")   Laptops
+                        li
+                            a.nav__item(href="#")   Desktop PCs
+                        li
+                            a.nav__item(href="#")   Networking Devices
+                        li 
+                            a.nav__item(href="#")   Printers & Scanners
+                        li
+                            a.nav__item(href="#")   PC Parts
+                        li 
+                            a.nav__item(href="#")   All Other Products
+                        li 
+                            a.nav__item(href="#")   Repairs
+                        li 
+                            a.nav__item.nav__item_blue(href="#")   Our Deals
+            form.form
+                button.form__button(type="button")
+                input.form__search(type="search" placeholder="Search here")
+            .actions  
+                .actions__search 
+                    button.actions__search-button
+                        img(src="assets/icons/search-icon.png", alt="")
+                .actions__cart 
+                    button.actions__cart-button
+                        picture  
+                            source(srcset="assets/icons/cart-icon.png" media = "(min-width: 1024px)")
+                            img(src="assets/icons/cart-icon-mobile.png", alt="")
+                .actions__profile 
+                    button.actions__profile-button 
+                        picture  
+                            source(srcset="assets/icons/user-icon.png" media = "(min-width: 1024px)")
+                            img(src="assets/icons/user-icon-mobile.png", alt="")
