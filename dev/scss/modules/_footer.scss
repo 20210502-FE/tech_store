@@ -214,6 +214,7 @@
 
             @include respond-to(desktop) {
                 border-bottom: none;
+                padding: 20px 40px;
             }
 
             @include respond-to(desktopHD) {
@@ -379,10 +380,6 @@
     padding-bottom: 7px;
 
     @include respond-to(desktop) {
-        padding: 20px 40px 0;
-    }
-
-    @include respond-to(desktopHD) {
         padding: 0;
     }
 }
