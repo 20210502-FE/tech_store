@@ -1,8 +1,7 @@
-const { dev, dest, parallel, series, watch } = require('gulp');
+const { src, dest, parallel, series, watch } = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const prefix = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const browsersync = require('browser-sync');
 const gulpCopy = require('gulp-copy');
@@ -16,15 +15,14 @@ var paths = {
 };
 
 function templates() {
-    return dev(paths.pug + 'pages/*.pug')
+    return src(paths.pug + 'pages/*.pug')
         .pipe(plumber())
         .pipe(pug({pretty: true}))
         .pipe(dest('build/'))
 }
 
 function css() {
-    return dev('dev/scss/**/*.scss')
-        .pipe(sourcemaps.init())
+    return src(paths.scss + 'pages/*.scss')
         .pipe(sass({
             includePaths: [paths.scss],
             outputStyle: 'expanded'
@@ -32,31 +30,27 @@ function css() {
         .pipe(prefix(['last 15 versions','> 1%','ie 8','ie 7','iOS >= 9','Safari >= 9','Android >= 4.4','Opera >= 30'], {
             cascade: true
         }))
-        .pipe(sourcemaps.write('.'))
         .pipe(dest('build/css'));
 }
 
 function js() {
-    return dev(paths.js + '*.js')
-        .pipe(sourcemaps.init())
-        .pipe(sourcemaps.write('.'))
+    return src(paths.js + '*.js')
         .pipe(dest('build/js'));
 }
 
 function copyAssets() {
-    return dev(['./dev/assets/**/*.*'],
+    return src(['./dev/assets/**/*.*'],
         del(paths.build + 'assets/**/*'))
         .pipe(gulpCopy(paths.build + 'assets', { prefix: 2 }));
 }
 
 function copyFavicon() {
-    return dev(['./dev/assets/favicons/*.ico'],
+    return src(['./dev/*.ico'],
         del('build/'))
         .pipe(dest('build/'));
 }
 
-
-function browserReload () {
+function browserReload() {
     return browsersync.reload;
 }
 
@@ -76,8 +70,7 @@ function browserSync() {
         server: {
             baseDir: paths.build
         },
-        notify: false,
-        browser: "google chrome",
+        notify: false
     });
 }
 
