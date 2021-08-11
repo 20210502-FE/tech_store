@@ -1,8 +1,6 @@
-// -
-//   var toogleButton = document.getElementById("toogle-popup");
-// -
-//  var popup = document.getElementById("popup");
 
-// toogleButton.onclick = function () {
-//     popup.classList.toogle("top-banner__popup_active");
-// }
+const toogleButton = document.getElementById("toggle-popup");
+toogleButton.onclick = function () {
+    const popup = document.getElementById("popup");
+    popup.classList.toggle("top-banner__popup_active");
+}
