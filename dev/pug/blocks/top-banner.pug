@@ -1,4 +1,5 @@
 section.wrapper.top-banner.flex-space-between 
+    .top-banner__logo
     .top-banner__select
         span.top-banner__text Mon-Thu:  
         button.top-banner__button.white-text.flex#toggle-popup 9:00 AM - 5:30 PM
@@ -37,10 +38,10 @@ section.wrapper.top-banner.flex-space-between
     .top-banner__social 
         .top-banner__social-text
                 p.white-text Call Us: (00) 1234 5678
-                .top-banner__social-icons
-                    .top-banner__icon_facebk
-                        a(href="#")
-                            img(src="assets/icons/facebk.png", alt="facebk")
-                    .top-banner__icon_insta
-                    a(href="#")
-                        img(src="assets/icons/insta.png", alt="insta")
+        .top-banner__social-icons
+            .top-banner__iconwrap
+                 a(href="#")
+                    img.top-banner__icon-facebk(src="assets/icons/facebk.png", alt="facebk")
+            .top-banner__iconwrap
+                a(href="#")
+                    img.top-banner__icon-insta(src="assets/icons/insta.png", alt="insta")

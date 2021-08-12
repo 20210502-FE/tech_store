@@ -20,7 +20,6 @@
     position: relative;
     background-color: #020202;
     align-items: center;
-    height: 44px;
     @include respond-to(mobile) {
         height: 40px;
     }
@@ -30,17 +29,38 @@
     @include respond-to(desktop) {
         height: 40px;
     }
+    @include respond-to(desktopHD) {
+        height: 44px;
+    }
+    &__logo {
+        width: 70px;
+        height: 35px;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        background: blue url("../../../assets/icons/logo.png") no-repeat center;
+        display: none;
+        @include respond-to(tablet) {
+            display: block;
+        }
+        @include respond-to(desktop) {
+            display: none;
+        }
+    }
     &__select {
         display: flex;
         align-items: center;
+        cursor: pointer;
         @include respond-to(mobile) {
             border-radius: 15px;
             border: 1px solid #acacac;
             padding: 0 8px;
-            cursor: pointer;
         }
         @include respond-to(tablet) {
             border: none;
+            margin-left: -47%;
+        }
+        @include respond-to(desktop) {
+            margin-left: 0;
+            padding-left: 65px;
         }
     }
     &__mark {
@@ -66,6 +86,9 @@
         @include respond-to(tablet) {
             width: 283px;
             left: 15px;
+        }
+        @include respond-to(desktopHD) {
+            left: 10%;
         }
         :before {
             position: absolute;
@@ -156,7 +179,6 @@
             padding-left: 12px;
         }
     }
-
     &__text {
         color: $color-gray;
         font-family: "Poppins Semi Bold";
@@ -164,12 +186,18 @@
         font-size: 10px;
         line-height: 18px;
         padding-top: 2px;
+        @include respond-to(desktopHD) {
+            font-size: 12px;
+        }
         &_mod {
             font-size: 12px;
             color: #acacac;
             padding: 0;
             @include respond-to(mobile) {
                 display: none;
+            }
+            @include respond-to(desktopHD) {
+                font-size: 14px;
             }
         }
     }
@@ -186,9 +214,17 @@
         padding: 0 6px;
     }
     &__social {
-        display: flex;
         @include respond-to(tablet) {
             display: none;
+        }
+        @include respond-to(desktop) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 180px;
+        }
+        @include respond-to(desktopHD) {
+            width: 205px;
         }
         &-text {
             padding-right: 10px;
@@ -205,18 +241,21 @@
         @include respond-to(mobile) {
             display: none;
         }
+        @include respond-to(desktop) {
+            display: flex;
+        }
     }
     &__icon {
-        &_facebk {
+        &-facebk {
             width: 16px;
+            height: 16px;
         }
-        &_insta {
-            width: 15px;
-            height: 15px;
+        &-insta {
+            width: 15.61px;
+            height: 15.61px;
         }
     }
 }
-
 .white-text {
     color: $color-white;
     font-family: "Poppins Semi Bold";
@@ -232,11 +271,15 @@
         line-height: 16.5px;
         letter-spacing: 0px;
     }
+    @include respond-to(desktopHD) {
+        font-size: 13px;
+    }
 }
 
 .flex {
     display: flex;
 }
+
 .flex-space-between {
     display: flex;
     justify-content: space-between;
@@ -249,11 +292,22 @@
         display: inline;
     }
     @include respond-to(desktop) {
+        display: none;
         margin-bottom: 5px;
+    }
+    @include respond-to(desktopHD) {
+        display: inline;
+        padding-bottom: 5px;
     }
     &-text {
         @include respond-to(mobile) {
             display: none;
+        }
+        @include respond-to(desktop) {
+            display: inline;
+        }
+        @include respond-to(desktopHD) {
+            display: inline;
         }
     }
 }
